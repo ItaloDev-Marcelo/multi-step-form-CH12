@@ -31,7 +31,7 @@ ul {
 body {
   font-size: 1em;
   background: url(./assets/images/bg-sidebar-mobile.svg) no-repeat ;
-  background-clip: contain;
+  background-size: 100%;
   background-color: var(--Magnolia);
 }
 
@@ -44,6 +44,8 @@ ul .navagation {
   align-content: center;
   border-radius: 25px;
   margin: 0 15px;
+  font-weight: 700;
+  color: var(--White);
 }
 
 .navagation.active {
@@ -69,9 +71,41 @@ section{
    padding-top: 2em;
 }
 
-
 .Navbar {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
   bottom: 0;
-  background-color:darkblue;
+  left: 0;
+  right: 0;
+  max-width: 99%;
+  height: 100px;
+  padding: 0 1.7em 0 1em;
+  background-color:var(--White);
 }
+
+
+button {
+  width: 100px;
+  height: 50px;
+}
+
+.btn-Dark-Blue {
+  background-color: var(--Marine-blue);
+  color: var(--White);
+  border: none;
+  border-radius: 7px;
+}
+
+.btn-Dark-Blue:hover, .btn-Dark-Blue:active  {
+  background-color:var(--Purplish-blue);
+}
+
+.btn-gray {
+  border: none;
+  background-color: transparent;
+  color: var(--Pastel-blue);
+  font-weight: 700;
+}
+
