@@ -7,12 +7,13 @@ export default function SelectForm() {
     return (
       <>
       <ul>
-         <li className="navagation1">1</li>
-         <li className="navagation2 active">2</li>
-         <li className="navagation3">3</li>
-         <li className="navagation4">4</li>
+         <li className="navagation">1</li>
+         <li className="navagation active">2</li>
+         <li className="navagation">3</li>
+         <li className="navagation">4</li>
       </ul>
-       <h2>Select your plan</h2>
+       <section>
+       <h2 className="form--title">Select your plan</h2>
        <form>
            <legend>You have the option of monthly or yearly billing.</legend>
            <div id='select--container'>
@@ -42,6 +43,7 @@ export default function SelectForm() {
            <button  onClick={() => navigate('/form-step1')} className="btn-gray">Go back</button>
            <button  onClick={() => navigate('/form-step1/form-step2/form-step3')} className="btn-Dark-Blue">Next Step</button>
        </div>
+       </section>
       </>
     )
 }
