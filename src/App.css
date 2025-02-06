@@ -31,7 +31,7 @@ ul {
 body {
   font-size: 1em;
   background: url(./assets/images/bg-sidebar-mobile.svg) no-repeat ;
-  background-size: 100%;
+  background-size: contain ;
   background-color: var(--Magnolia);
 }
 
@@ -75,13 +75,104 @@ section{
 .form--title  {
    font-size: 1.5em;
    padding-top: 2em;
-   margin-bottom: 1em;
+   margin-bottom: .5em;
 }
 
 legend {
-  margin: .5em 0 2em 0;
+  margin: .5em 0 .5em 0;
   line-height: 25px;
 }
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+form div label {
+  padding: .6em 0;
+  font-weight:600;
+}
+
+form div .basic {
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  outline: 1px solid  #9699ab;
+  padding-left: 1em;
+}
+.form-title-2-fix {
+  margin: -1em 0 .5em 0;
+}
+
+.selected {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid gray;
+  margin: .5em 0;
+  border-radius: 7px;
+  padding: .5em;
+}
+
+.selected img {
+  margin-right: 1em;
+}
+
+.form-2 {
+  padding:0  1.3em;
+  height: auto;
+  padding-bottom: .2em;
+}
+
+
+input[type='radio'] {
+  list-style: none;
+  appearance: none;
+}
+
+label > p {
+  width: 50px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Light-blue);
+  padding: .2em 0;
+  border-radius: 7px;
+  height: 50px;
+  margin: 1em 0 1.1em 0;
+}
+
+.row input {
+  appearance: none;
+  width: 40px;
+  height: 20px;
+  margin: 0 1em;
+  border-radius: 25px;
+  background-color: hsl(213, 96%, 18%);
+}
+
+.row input::before {
+  display: block;
+  position: relative;
+  top: 2.2px;
+  left: 2px;
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 25px;
+  transform: scale(.9);
+  background-color: #fff;
+}
+
+.row input:checked::before {
+  position: relative;
+  left: 22px;
+}
+
 
 
 
@@ -94,7 +185,7 @@ legend {
   left: 0;
   right: 0;
   max-width: 99%;
-  height: 100px;
+  height: 75px;
   padding: 0 1.7em 0 1em;
   background-color:var(--White);
 }
@@ -102,7 +193,7 @@ legend {
 
 button {
   width: 100px;
-  height: 50px;
+  height: 35px;
 }
 
 .btn-Dark-Blue {
