@@ -16,24 +16,33 @@ export default function CheckForm() {
        <h2 className="form--title">Pick add-ons</h2>
            <form>
                <legend>Add-ons help enhance your gaming experience.</legend>  
-               <label htmlFor="ch-1">
-               <input type="checkBox" name='Online service' id="ch-1" value='+$1/mo'/>
+              <div>
+              <label htmlFor="ch-1">
                  <span> <strong>Online service</strong>
                  Access to multiplayer games</span>
                  <a href="#">+$1/mo</a>
                </label>
-               <label htmlFor="ch-2">
-               <input type="checkBox" name='Larger storage' id="ch-2" value='+$2/mo'/>
+               <input type="checkBox" name='Online service' id="ch-1" value='+$1/mo'/>
+             
+              </div>
+              <div>
+              <label htmlFor="ch-2">
                  <span> <strong>Larger storage</strong>
                  Extra 1TB of cloud save</span>
                  <a href="#">+$2/mo</a>
                </label>
-               <label htmlFor="ch-3">
-               <input type="checkBox" name='Customizable Profile' id="ch-3" value='+$2/mo'/>
+               <input type="checkBox" name='Larger storage' id="ch-2" value='+$2/mo'/>
+              
+              </div>
+              <div>
+              <label htmlFor="ch-3">
                  <span> <strong>Customizable Profile</strong>
                  Custom theme on your profile</span>
                  <a href="#">+$2/mo</a>
                </label>
+               <input type="checkBox" name='Customizable Profile' id="ch-3" value='+$2/mo'/>
+              
+              </div>
            </form>
            <div className="Navbar">
            <button  onClick={() => navigate('/form-step1/form-step2')} className="btn-gray">Go back</button>
