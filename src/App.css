@@ -35,6 +35,11 @@ body {
   background-color: var(--Magnolia);
 }
 
+ul {
+  position: relative;
+  left: 0;
+  width: 100%;
+}
 
 ul .navagation {
   border: 1px solid #fff;
@@ -46,6 +51,7 @@ ul .navagation {
   margin: 0 15px;
   font-weight: 700;
   color: var(--White);
+
 }
 
 .navagation.active {
@@ -57,9 +63,9 @@ ul .navagation {
 
 section{
    background-color: var(--White);
-   width: 325px;
+   width: 330px;
    position: relative;
-   top: 7em;
+   top: 4em;
    left: 7%;
    height: 400px;
    border-radius: 10px;
