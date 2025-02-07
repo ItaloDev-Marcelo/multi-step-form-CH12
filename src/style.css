@@ -198,7 +198,6 @@
   
   .form-2 {
     padding:0  1.3em;
-    height: 430px;
     top: -52px;
     margin-bottom: 7em;
     padding-bottom: .2em;
@@ -322,6 +321,6 @@ input[type='radio'] {
   }
 
 .Form-3 {
-  height: 410px;
+  height: 430px;
   top: -76px;
 }
