@@ -25,8 +25,8 @@ export default function SelectForm() {
                  <input type="radio" name='selectMe' value='$9/mo'/>
                  
               </label>
-              <p> Arcade <br />
-                 $9/mo</p>
+              <p> <span className="radio--title">Arcade</span> <br />
+                 <small>$9/mo</small></p>
               </div>
              <div className="selected">
              <label>
@@ -34,16 +34,16 @@ export default function SelectForm() {
                  <input type="radio" name='selectMe' value='$12/mo'/>
                  
               </label>
-              <p> Advanced <br />
-                 $12/mo</p>
+              <p> <span className="radio--title">Advanced</span>  <br />
+                 <small>$12/mo</small></p>
              </div>
              <div className="selected">
              <label>
                  <img src={Pro} alt=''/>
                  <input type="radio" name='selectMe' value='$15/mo'/>
               </label>
-              <p>Pro <br />
-              $15/mo</p>
+              <p> <span className="radio--title">Pro</span><br />
+              <small>$15/mo</small></p>
              </div>
            </div>
            <div className="row">

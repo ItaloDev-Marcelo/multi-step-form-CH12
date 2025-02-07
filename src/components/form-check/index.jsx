@@ -12,11 +12,11 @@ export default function CheckForm() {
          <li className="navagation active">3</li>
          <li className="navagation">4</li>
       </ul>
-       <section>
+       <section className="Form-3">
        <h2 className="form--title">Pick add-ons</h2>
            <form>
                <legend>Add-ons help enhance your gaming experience.</legend>  
-              <div className="ch-row">
+              <div className="ch-row box-item">
                 <input type="checkbox" name='Online service' id="ch-1" value='+$1/mo'/>
              
               <label htmlFor="ch-1">
@@ -27,7 +27,7 @@ export default function CheckForm() {
                </label>
                <a href="#">+$1/mo</a>
               </div>
-              <div className="ch-row">
+              <div className="ch-row box-item">
               <input type="checkbox" name='Larger storage' id="ch-2" value='+$2/mo'/>
               
               <label htmlFor="ch-2">
@@ -38,7 +38,7 @@ export default function CheckForm() {
                </label>
                <a href="#">+$2/mo</a>
               </div>
-              <div className="ch-row">
+              <div className="ch-row box-item">
               <input type="checkbox" name='Customizable Profile' id="ch-3" value='+$2/mo'/>
               
               <label htmlFor="ch-3">
