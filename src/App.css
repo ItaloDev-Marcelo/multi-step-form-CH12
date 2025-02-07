@@ -157,7 +157,7 @@ small {
 
 input[type='radio'] {
   list-style: none;
-  appearance: none;
+  appearance:unset;
 }
 
 label > p {
@@ -261,7 +261,8 @@ label > p {
 
 
 .Navbar {
-  display: inline-flex;
+  display: flex;
+  outline: 1px solid red;
   justify-content: space-between;
   align-items: center;
   position: fixed;
