@@ -19,7 +19,6 @@ export default function SelectForm() {
    function hundleFormData(formData) {
         setData(formData)
         setDataForm1(formData)
-        alert(formData)
    }
  
 
@@ -85,7 +84,7 @@ export default function SelectForm() {
        </form>
        <div className="Navbar">
        <button onClick={() => navigate('/form-step1')} className="btn-gray">Go back</button>
-         {!data ? <button type="submit" form="selectme" className="btn-gray">Next Step</button>
+         {!data ? <button type="submit" form="selectme" className="btn-Dark-Blue">Next Step</button>
            : <button  onClick={() => navigate('/form-step1/form-step2/form-step3')} className="btn-Dark-Blue">Next Step</button>
      
           } 
