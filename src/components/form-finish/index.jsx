@@ -1,4 +1,4 @@
-
+ 
 import bg from "../../assets/images/bg-sidebar-mobile.svg"
 
 export default function Result() {
