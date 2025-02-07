@@ -19,6 +19,7 @@ export default function SelectForm() {
    function hundleFormData(formData) {
         setData(formData)
         setDataForm1(formData)
+        alert(formData)
    }
  
 
@@ -45,7 +46,7 @@ export default function SelectForm() {
             required: true
            })}>
                  <img src={Arcade} alt='' />
-                 <input type="radio"  name='selectMe' value='$9/mo'/>
+                 <input type="radio"  name='select' value='$9/mo'/>
                  
               </label>
               <p> <span className="radio--title">Arcade</span> <br />
@@ -56,7 +57,7 @@ export default function SelectForm() {
             required: true
            })}>
                  <img src={Advanced} alt='' />
-                 <input type="radio"   name='selectMe' value='$12/mo'/>
+                 <input type="radio"   name='select' value='$12/mo'/>
                  
               </label>
               <p> <span className="radio--title">Advanced</span>  <br />
@@ -67,7 +68,7 @@ export default function SelectForm() {
             required: true
            })}>
                  <img src={Pro} alt=''/>
-                 <input type="radio"   name='selectMe' value='$15/mo'/>
+                 <input type="radio"   name='select' value='$15/mo'/>
               </label>
               <p> <span className="radio--title">Pro</span><br />
               <small>$15/mo</small></p>
