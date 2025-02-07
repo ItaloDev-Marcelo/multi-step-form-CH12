@@ -154,11 +154,11 @@ small {
   padding-bottom: .2em;
 }
 
-/*
+
 input[type='radio'] {
   list-style: none;
   appearance:unset;
-}*/
+}
 
 label > p {
   width: 50px;
