@@ -17,34 +17,37 @@ export default function CheckForm() {
            <form>
                <legend>Add-ons help enhance your gaming experience.</legend>  
               <div className="ch-row">
-                <input type="checkBox" name='Online service' id="ch-1" value='+$1/mo'/>
+                <input type="checkbox" name='Online service' id="ch-1" value='+$1/mo'/>
              
               <label htmlFor="ch-1">
-                 <span> <strong>Online service</strong>
+                 <div className="ch-row">
+                 <span> <strong>Online service</strong> <br />
                  Access to multiplayer games</span>
-                 <a href="#">+$1/mo</a>
+                 </div>
                </label>
-               
+               <a href="#">+$1/mo</a>
               </div>
               <div className="ch-row">
-              <input type="checkBox" name='Larger storage' id="ch-2" value='+$2/mo'/>
+              <input type="checkbox" name='Larger storage' id="ch-2" value='+$2/mo'/>
               
               <label htmlFor="ch-2">
-                 <span> <strong>Larger storage</strong>
+                 <div className="ch-row">
+                 <span> <strong>Larger storage</strong> <br />
                  Extra 1TB of cloud save</span>
-                 <a href="#">+$2/mo</a>
+                 </div>
                </label>
-               
+               <a href="#">+$2/mo</a>
               </div>
               <div className="ch-row">
-              <input type="checkBox" name='Customizable Profile' id="ch-3" value='+$2/mo'/>
+              <input type="checkbox" name='Customizable Profile' id="ch-3" value='+$2/mo'/>
               
               <label htmlFor="ch-3">
-                 <span> <strong>Customizable Profile</strong>
+               <div className="ch-row">
+               <span> <strong>Customizable Profile</strong> <br />
                  Custom theme on your profile</span>
-                 <a href="#">+$2/mo</a>
+               </div>
                </label>
-               
+               <a href="#">+$2/mo</a>
               </div>
            </form>
            <div className="Navbar">

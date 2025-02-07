@@ -33,6 +33,7 @@ body {
   background: url(./assets/images/bg-sidebar-mobile.svg) no-repeat ;
   background-size: contain ;
   background-color: var(--Magnolia);
+  font-family: "Ubuntu", serif;
 }
 
 ul {
@@ -134,6 +135,8 @@ label > p {
   width: 50px;
 }
 
+
+
 .row {
   display: flex;
   flex-direction: row;
@@ -173,7 +176,32 @@ label > p {
   left: 22px;
 }
 
+.line-row {
+  display: flex;
+}
 
+.ch-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid gray;
+  padding: 0 .5em;
+  background-color: #9699ab;
+  margin: .7em 0;
+  border-radius: 7px;
+}
+
+.ch-row input[type='checkbox'] {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--Purplish-blue);
+}
+
+.ch-row input[type='checkbox']:checked {
+  background-size: 12px 12px;
+  background: url(./assets/images/icon-checkmark.svg);
+}
 
 
 .Navbar {
