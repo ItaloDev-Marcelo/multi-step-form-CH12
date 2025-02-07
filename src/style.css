@@ -22,10 +22,15 @@
     font-size: 1em;
     background-color: var(--Magnolia);
     font-family: "Ubuntu", serif;
+    overflow-x: hidden;
   }
 
   a {
     text-decoration: none;
+  }
+
+  .container-img img {
+    width: 100vw;
   }
 
   /*navegation-list bar*/
@@ -74,7 +79,7 @@
  }
 
  .Form-0 {
-    height: 420px;
+    height: 430px;
  }
 
 .form--title  {
@@ -193,6 +198,7 @@
   
   .form-2 {
     padding:0  1.3em;
+    height: 430px;
     top: -52px;
     margin-bottom: 7em;
     padding-bottom: .2em;
