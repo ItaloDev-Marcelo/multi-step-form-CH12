@@ -1,18 +1,22 @@
 import { useNavigate } from "react-router-dom"
-
+import bg from "../../assets/images/bg-sidebar-mobile.svg"
 
 export default function BasicForm() {
 
   const navigate = useNavigate() 
     return (
       <>
-        <ul>
+      <div className="container-img">
+          <img src={bg} alt='' />
+          <ul>
          <li className="navagation active">1</li>
          <li className="navagation">2</li>
          <li className="navagation">3</li>
          <li className="navagation">4</li>
       </ul>
-      <section>
+      </div>
+       
+      <section className="Form-0">
        <div className="form-area">
        <h1 className="form--title">Personal info</h1>
        <form>

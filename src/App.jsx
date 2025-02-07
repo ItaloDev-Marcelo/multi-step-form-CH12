@@ -1,4 +1,4 @@
-import './App.css'
+import './style.css'
 import SelectForm from './components/form-select'
 import BasicForm from './components/form-basic'
 import CheckForm from './components/form-check'

@@ -2,18 +2,23 @@ import { useNavigate } from "react-router-dom"
 import Arcade from '../../assets/images/icon-arcade.svg';
 import Advanced from '../../assets/images/icon-advanced.svg';
 import Pro from '../../assets/images/icon-pro.svg';
+import bg from "../../assets/images/bg-sidebar-mobile.svg"
 export default function SelectForm() {
    
    const navigate = useNavigate()
 
     return (
       <>
-      <ul>
+      <div className="container-img">
+                         <img src={bg} alt='' />
+                         <ul>
          <li className="navagation">1</li>
          <li className="navagation active">2</li>
          <li className="navagation">3</li>
          <li className="navagation">4</li>
       </ul>
+                     </div>
+     
        <section className="form-2">
        <h2 className="form--title form-title-2-fix">Select your plan</h2>
        <form>

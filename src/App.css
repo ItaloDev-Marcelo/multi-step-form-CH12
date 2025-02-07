@@ -18,6 +18,10 @@
 --White: hsl(0, 0%, 100%);
 }
 
+.container-img img {
+width: 100%;
+}
+
 ul {
   list-style: none;
   display: flex;
@@ -27,18 +31,16 @@ ul {
   left: 10%;
 }
 
-
 body {
   font-size: 1em;
-  background: url(./assets/images/bg-sidebar-mobile.svg) no-repeat ;
-  background-size: contain ;
   background-color: var(--Magnolia);
   font-family: "Ubuntu", serif;
 }
 
 ul {
-  position: relative;
-  left: 0;
+  position: absolute;
+  top: 5%;
+  left: -2%;
   width: 100%;
 }
 
@@ -70,8 +72,8 @@ section{
    background-color: var(--White);
    width: 330px;
    position: relative;
-   top: 4em;
-   left: 7%;
+   top: -5.4em;
+   left: 2%;
    height: 400px;
    border-radius: 10px;
    padding: 0 1.5em;
@@ -115,6 +117,7 @@ form div .basic {
   outline: 1px solid  #9699ab;
   padding-left: 1em;
 }
+
 .form-title-2-fix {
   margin: -1em 0 .5em 0;
 }
@@ -146,7 +149,8 @@ small {
 .form-2 {
   padding:0  1.3em;
   height: auto;
-  top: 77px;
+  top: -52px;
+  margin-bottom: 7em;
   padding-bottom: .2em;
 }
 
@@ -159,8 +163,6 @@ input[type='radio'] {
 label > p {
   width: 50px;
 }
-
-
 
 .row {
   display: flex;
@@ -239,6 +241,8 @@ label > p {
   border-radius: 7px;
 }
 
+
+
 .ch-row span {
   font-size: .9em;
 }
@@ -252,7 +256,7 @@ label > p {
 
 .Form-3 {
   height: 450px;
-  top: 54px;
+  top: -76px;
 }
 
 

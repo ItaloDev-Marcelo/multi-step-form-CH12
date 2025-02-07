@@ -1,17 +1,21 @@
 import { useNavigate } from "react-router-dom"
-
+import bg from "../../assets/images/bg-sidebar-mobile.svg"
 export default function CheckForm() {
 
   const navigate = useNavigate() 
 
      return (
          <>
-      <ul>
+          <div className="container-img">
+                   <img src={bg} alt='' />
+                   <ul>
          <li className="navagation">1</li>
          <li className="navagation">2</li>
          <li className="navagation active">3</li>
          <li className="navagation">4</li>
       </ul>
+               </div>
+     
        <section className="Form-3">
        <h2 className="form--title">Pick add-ons</h2>
            <form>
@@ -21,11 +25,11 @@ export default function CheckForm() {
              
               <label htmlFor="ch-1">
                  <div className="ch-row">
-                 <span> <strong>Online service</strong> <br />
+                  <span> <strong>Online service</strong> <br />
                  Access to multiplayer games</span>
                  </div>
                </label>
-               <a href="#">+$1/mo</a>
+                <a href="#">+$1/mo</a>
               </div>
               <div className="ch-row box-item">
               <input type="checkbox" name='Larger storage' id="ch-2" value='+$2/mo'/>
