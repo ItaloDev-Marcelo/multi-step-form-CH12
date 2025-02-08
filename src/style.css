@@ -191,6 +191,11 @@
     border-radius: 7px;
     padding: .2em .5em;
   }
+
+  .selected.active {
+    border: 1px solid  hsl(243, 100%, 62%);
+    background-color: var(--Magnolia);
+  }
   
   .selected img {
     margin-right: 1em;
@@ -205,8 +210,13 @@
   
   
 input[type='radio'] {
-    list-style: none;
-    appearance: none;
+  opacity: 0;
+  }
+
+  .space {
+    margin: .4em 0;
+    font-weight: 700;
+    color: var(--Marine-blue);
   }
   
   label > p {
