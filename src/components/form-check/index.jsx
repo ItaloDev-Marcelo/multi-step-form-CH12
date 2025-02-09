@@ -1,12 +1,34 @@
 import { useNavigate } from "react-router-dom"
 import bg from "../../assets/images/bg-sidebar-mobile.svg"
-import { useContext } from "react"
+import { useContext, useEffect, useState} from "react"
 import { GlobalFormContext } from "../../context/GlobalFormContext"
+import { useForm } from "react-hook-form"
 export default function CheckForm() {
 
   const navigate = useNavigate() 
 
-   const { toggle } = useContext(GlobalFormContext) 
+   const {register, watch, handleSubmit} = useForm() ;
+   const [data, setData] = useState(false) 
+   const [checkList, setCheckList] = useState([]) 
+   const { toggle, formMultStepData, setFormMultStepData } = useContext(GlobalFormContext) ;
+   const check = watch("checkMe", []) 
+  
+   useEffect(() => {
+     setCheckList(check)
+   }, [check])
+
+   console.log('this is in checkList ' , checkList)
+   console.log('this is in watch checkMe', check)
+
+
+   
+
+   function getCheckBox()  {
+      setData(!data) 
+      setFormMultStepData([...formMultStepData, {checkList}])
+   }
+
+  
      return (
          <>
           <div className="container-img">
@@ -21,10 +43,10 @@ export default function CheckForm() {
      
        <section className="Form-3">
        <h2 className="form--title">Pick add-ons</h2>
-           <form>
+           <form onSubmit={handleSubmit(getCheckBox)} id='forma'>
                <legend>Add-ons help enhance your gaming experience.</legend>  
               <div className="ch-row box-item">
-                <input type="checkbox" name='Online service' id="ch-1"  value={toggle ? '+$10/yr' : '+$1/mo'}/>
+                <input type="checkbox" {...register('checkMe')} name='checkMe' id="ch-1"  value={toggle ? '+$10/yr' : '+$1/mo'}/>
              
               <label htmlFor="ch-1">
                  <div className="ch-row">
@@ -32,10 +54,11 @@ export default function CheckForm() {
                  Access to multiplayer games</span>
                  </div>
                </label>
+               
                 <a href="#">+$1{toggle ? '0' : null}/mo</a>
               </div>
               <div className="ch-row box-item">
-              <input type="checkbox" name='Larger storage' id="ch-2" value={toggle ? '+$20/yr' : '+$2/mo'}/>
+              <input type="checkbox" {...register('checkMe')} name='checkMe' id="ch-2" value={toggle ? '+$20/yr' : '+$2/mo'}/>
               
               <label htmlFor="ch-2">
                  <div className="ch-row">
@@ -46,7 +69,7 @@ export default function CheckForm() {
                <a href="#">+$2{toggle ? '0' : null} /mo</a>
               </div>
               <div className="ch-row box-item">
-              <input type="checkbox" name='Customizable Profile' id="ch-3"  value={toggle ? '+$2yr/mo' : '+$2/mo'}/>
+              <input type="checkbox" {...register('checkMe')} name='checkMe' id="ch-3"  value={toggle ? '+$2yr/mo' : '+$2/mo'}/>
               
               <label htmlFor="ch-3">
                <div className="ch-row">
@@ -59,9 +82,12 @@ export default function CheckForm() {
            </form>
            <div className="Navbar">
            <button  onClick={() => navigate('/form-step1/form-step2')} className="btn-gray">Go back</button>
-           <button  onClick={() => navigate('/form-step1/form-step2/form-step3/form-step4')} className="btn-Dark-Blue">Next Step</button>
-       </div>
+           {!data ?  <button type="submit"  form="forma" className="btn-Dark-Blue">Next Step</button> 
+      :  <button onClick={() => navigate('/form-step1/form-step2/form-step3/form-step4')}  className="btn-Dark-Blue">Next Step</button> 
+    }
+            </div>
        </section>
          </>
      )
 }
+

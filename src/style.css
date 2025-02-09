@@ -296,6 +296,7 @@ input[type='radio'] {
   border: 1px solid hsl(229, 24%, 87%) ;
 }
 
+
 .ch-row {
   display: flex;
   flex-direction: row;
@@ -305,6 +306,7 @@ input[type='radio'] {
   margin: 1.2em 0;
   border-radius: 7px;
 }
+
 
 .ch-row strong {
     font-size: 1.2em;
@@ -319,16 +321,14 @@ input[type='radio'] {
     margin-left: -2em;
   }
 
-.ch-row input[type='checkbox'] {
+
+.ch-row input {
   width: 20px;
   height: 20px;
-  opacity: .5;
   accent-color: var(--Purplish-blue);
 }
 
-.ch-row input[type='checkbox']:checked {
-    opacity: 1;
-  }
+
 
 .Form-3 {
   height: 430px;

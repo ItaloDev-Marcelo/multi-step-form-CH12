@@ -11,15 +11,15 @@ export default function SelectForm() {
 
    const navigate = useNavigate()
 
-   const { register, handleSubmit, formState: { errors }, reset, watch } = useForm()
+   const { register, handleSubmit, watch } = useForm()
    const [data, setData] = useState(false)
    const [toggleSwitch, setToggleSwitch] =  useState(false);
-   const { setDataForm1,  setToggle} = useContext(GlobalFormContext)
+   const { formMultStepData,setFormMultStepData,  setToggle} = useContext(GlobalFormContext)
    const result = watch('select') 
 
    function hundleFormData(formData) {
       setData(formData)
-      setDataForm1(formData)
+      setFormMultStepData([...formMultStepData, formData])
       setToggle(toggleSwitch)
    }
 
@@ -101,7 +101,7 @@ export default function SelectForm() {
             </form>
             <div className="Navbar">
                <button onClick={() => navigate('/form-step1')} className="btn-gray">Go back</button>
-               {!data ? <button type="submit" form="selectme" className="btn-gray">Next Step</button>
+               {!data ? <button type="submit" form="selectme" className="btn-Dark-Blue">Next Step</button>
                : <button onClick={() => navigate('/form-step1/form-step2/form-step3')} className="btn-Dark-Blue">Next Step</button>
 
                }

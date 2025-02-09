@@ -8,19 +8,15 @@ import { GlobalFormContext } from "../../context/GlobalFormContext"
 
 export default function BasicForm() {
 
-  const {register, handleSubmit, formState: {errors}, reset, watch} = useForm()
+  const {register, handleSubmit} = useForm()
   const [data, setData] = useState(false) 
   const navigate = useNavigate() 
-   const {setDataForm0} = useContext(GlobalFormContext) 
+  const {setFormMultStepData} = useContext(GlobalFormContext) 
 
   function hundleForm(formData) {
        setData(formData)
-       setDataForm0(formData)
+       setFormMultStepData([formData])
   }
-
-
-
-
 
     return (
       <>

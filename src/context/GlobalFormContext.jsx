@@ -3,15 +3,10 @@ import { createContext, useState } from "react";
 
 export const GlobalFormContext = createContext(null)
 
-export default function MultFormProvider({children})  {
+export default function MultFormProvider({ children }) {
 
-    const [dataForm0, setDataForm0] = useState(null)
-    const [dataForm1, setDataForm1] = useState(null)
-
+    const [formMultStepData, setFormMultStepData] = useState([])
     const [toggle, setToggle] = useState(null)
-    console.log(dataForm0, dataForm1, toggle)
-
-    alert(dataForm0, dataForm1)
- 
-    return <GlobalFormContext.Provider value={{setDataForm0, setDataForm1,  setToggle, toggle}}>{children}</GlobalFormContext.Provider>
+    console.log(formMultStepData)
+    return <GlobalFormContext.Provider value={{ formMultStepData, setFormMultStepData, setToggle, toggle }}>{children}</GlobalFormContext.Provider>
 }
