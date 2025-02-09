@@ -57,7 +57,7 @@ export default function SelectForm() {
                      <div className="info-box">
                         <p> <span className="radio--title">Arcade</span> <br />
                            <small>$9{toggleSwitch ? '0/yr' : '/mo'}</small></p>
-                        <p className="space">{toggleSwitch ? '2 months free' : null}</p>
+                         <p className="space">{toggleSwitch ? '2 months free' : null}</p>
                      </div>
                   </div>
                   <div className={result == 'Advanced $12/mo' || result == 'Advanced $120/yr' ? "selected active" : "selected"}>
