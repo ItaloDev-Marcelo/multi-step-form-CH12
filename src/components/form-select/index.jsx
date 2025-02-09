@@ -2,7 +2,8 @@ import { useNavigate } from "react-router-dom"
 import Arcade from '../../assets/images/icon-arcade.svg';
 import Advanced from '../../assets/images/icon-advanced.svg';
 import Pro from '../../assets/images/icon-pro.svg';
-import bg from "../../assets/images/bg-sidebar-mobile.svg"
+
+import bg from "../../assets/images/bg-sidebar-desktop.svg"
 
 import { useContext, useState } from "react"
 import { GlobalFormContext } from "../../context/GlobalFormContext"
@@ -31,9 +32,10 @@ export default function SelectForm() {
 
 
    return (
-      <>
+      <div className="form-container">
          <div className="container-img">
-            <img src={bg} alt='' />
+            
+                        <img src={bg} className="bg" />
             <ul>
                <li className="navagation">1</li>
                <li className="navagation active">2</li>
@@ -107,6 +109,6 @@ export default function SelectForm() {
                }
             </div>
          </section>
-      </>
+      </div>
    )
 }

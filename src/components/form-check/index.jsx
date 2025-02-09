@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import bg from "../../assets/images/bg-sidebar-mobile.svg"
+import bg from "../../assets/images/bg-sidebar-desktop.svg"
 import { useContext, useEffect, useState} from "react"
 import { GlobalFormContext } from "../../context/GlobalFormContext"
 import { useForm } from "react-hook-form"
@@ -30,10 +30,10 @@ export default function CheckForm() {
 
   
      return (
-         <>
+         <div className="form-container">
           <div className="container-img">
-                   <img src={bg} alt='' />
-                   <ul>
+            <img src={bg} className="bg" />
+        <ul>
          <li className="navagation">1</li>
          <li className="navagation">2</li>
          <li className="navagation active">3</li>
@@ -87,7 +87,7 @@ export default function CheckForm() {
     }
             </div>
        </section>
-         </>
+         </div>
      )
 }
 

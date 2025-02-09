@@ -29,8 +29,13 @@
     text-decoration: none;
   }
 
-  .container-img img {
-    width: 100vw;
+  .container-img  {
+    max-width: 100%;
+    height: 200px;
+    background-image: url('./assets/images/bg-sidebar-mobile.svg');
+    background-size: cover; /* Ajusta para cobrir todo o espaço */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetições */
   }
 
   /*navegation-list bar*/
@@ -165,7 +170,9 @@
   
   
 /*Select-form*/
-
+.bg {
+  display: none;
+}
 
 
 .form-title-2-fix {
@@ -328,9 +335,143 @@ input[type='radio'] {
   accent-color: var(--Purplish-blue);
 }
 
-
-
 .Form-3 {
   height: 430px;
   top: -76px;
+}
+
+
+@media (min-width: 800px) {
+  .container-img  {
+    height: 250px;
+  }
+
+
+  .Form-0 , .form-2, .Form-3 {
+    width: 410px;
+    position: relative;
+    top: -7.5em;
+  }
+ 
+  .box-item {
+    padding: 0 1em;
+  }
+
+  .ch-row span {
+    margin-left: -3em;
+  }
+  .ch-row:nth-of-type(2) span {
+    margin-left: -4.2em;
+  }
+
+
+
+  .form-2 {
+    top: -5.2em;
+  }
+
+
+  ul .navagation {
+    width: 45px;
+    height:  45px;
+    margin: 0 15px;
+  }
+  
+
+  ul {
+    top: 10%;
+  }
+
+  
+
+}
+
+
+@media (min-width: 1024px)  {
+
+  .form-container {
+    display: flex;
+    position: relative;
+    top: 0px;
+    margin: 75px auto 0 auto
+    ;
+    width: 850px;
+    height: 500px;
+    background-color: var(--White);
+    border-radius: 10px;
+  }
+
+
+  legend {
+    max-width: 100%;
+  }
+  
+
+
+  
+  .Form-0 , .form-2, .Form-3 {
+    width: 475px;
+    position: relative;
+    top: 0;
+    left: -2em;
+    background-color: transparent;
+  }
+
+  .form-2{
+    top: 1em;
+  }
+
+  .container-img {
+    
+    background: url(none);
+  }
+
+ .container-img  .bg   {
+    height: auto; 
+    padding: 1em 1em;
+    max-width: 100%;
+    height:  500px;
+    display: block;
+    border-radius: 15px !important;
+  }
+
+
+
+  ul {
+    flex-direction: column;
+    justify-content: flex-start;
+    top: 0;
+    left: 0;
+    width: 274px;
+    height: 100%;
+    padding-top: 2em;
+  }
+
+  
+  ul .navagation {
+    position: relative;
+    left: 10%;
+    width: 40px;
+    height: 40px;
+    margin: 17px 0;
+  }
+
+  .Navbar {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    bottom: -10%;
+    background-color:transparent;
+  }
+
+  .form-2 .Navbar  {
+    flex-direction: row-reverse;
+    position: absolute;
+    bottom: -20%;
+  }
+  
+
+  
+
 }

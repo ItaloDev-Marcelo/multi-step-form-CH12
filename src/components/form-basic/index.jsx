@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import bg from "../../assets/images/bg-sidebar-mobile.svg"
+import bg from "../../assets/images/bg-sidebar-desktop.svg"
 import { useForm } from "react-hook-form"
 import { useContext, useState } from "react"
 import { GlobalFormContext } from "../../context/GlobalFormContext"
@@ -19,9 +19,10 @@ export default function BasicForm() {
   }
 
     return (
-      <>
+      <div className="form-container">
       <div className="container-img">
-          <img src={bg} alt='' />
+        
+                    <img src={bg} className="bg" />
           <ul>
          <li className="navagation active">1</li>
          <li className="navagation">2</li>
@@ -70,7 +71,7 @@ export default function BasicForm() {
        </div>
        
       </section>
-      </>
+      </div>
      
     )
 }
