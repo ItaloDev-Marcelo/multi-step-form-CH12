@@ -10,8 +10,6 @@ export default function MultFormProvider({children})  {
 
     const [toggle, setToggle] = useState(null)
     console.log(dataForm0, dataForm1, toggle)
-
-    alert(dataForm0, dataForm1)
  
     return <GlobalFormContext.Provider value={{setDataForm0, setDataForm1,  setToggle, toggle}}>{children}</GlobalFormContext.Provider>
 }
