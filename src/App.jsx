@@ -1,8 +1,8 @@
 import './style.css'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import SelectForm from './components/form-select'
 import BasicForm from './components/form-basic'
 import CheckForm from './components/form-check'
-import { Navigate, Route, Routes } from 'react-router-dom'
 import Result from './components/form-finish'
 
 function App() {
