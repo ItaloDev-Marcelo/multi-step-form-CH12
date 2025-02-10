@@ -14,13 +14,14 @@ export default function CheckForm() {
   const check = watch("checkMe", []);
 
   useEffect(() => {
+   
     setCheckList(check)
   }, [check])
 
 
   function getCheckBox() {
     setData(!data)
-    setFormMultStepData([...formMultStepData, { checkList }])
+    setFormMultStepData([...formMultStepData, checkList])
   }
 
 
@@ -39,9 +40,10 @@ export default function CheckForm() {
       <section className="Form-3">
         <h2 className="form--title">Pick add-ons</h2>
         <form onSubmit={handleSubmit(getCheckBox)} id='forma'>
-          <legend>Add-ons help enhance your gaming experience.</legend>
+          <legend className="sub-title">Add-ons help enhance your gaming experience.</legend>
           <div className="ch-row box-item">
-            <input type="checkbox" {...register('checkMe')} name='checkMe' id="ch-1" value={!toggle ? ' Online service +$10/yr' : 'Online service +$1/mo'} />
+            <input type="checkbox" {...register('checkMe')}
+             name='checkMe' id="ch-1" value={!toggle ? ' Online service +$10/yr' : 'Online service +$1/mo'} />
 
             <label htmlFor="ch-1">
               <div className="ch-row">

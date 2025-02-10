@@ -12,11 +12,11 @@ export default function SelectForm() {
 
    const navigate = useNavigate();
    const { register, handleSubmit, watch } = useForm();
-   const { formMultStepData, setFormMultStepData, setToggle } = useContext(GlobalFormContext);
+   const { formMultStepData, setFormMultStepData, setToggle} = useContext(GlobalFormContext);
    const [data, setData] = useState(false);
    const [toggleSwitch, setToggleSwitch] = useState(false);
    const result = watch('select');
-
+ 
 
    function hundleFormData(formData) {
       setData(formData)
@@ -45,7 +45,7 @@ export default function SelectForm() {
             <h2 className="form--title form-title-2-fix">Select your plan</h2>
             <form id="selectme" onSubmit={handleSubmit(hundleFormData)}>
 
-               <legend>You have the option of monthly or yearly billing.</legend>
+               <legend className="sub-title">You have the option of monthly or yearly billing.</legend>
                <div id='select--container'>
                   <div className={result == 'Arcade $9/mo' || result == 'Arcade $90/yr' ? "selected active" : "selected"}>
                      <label htmlFor="select-01"  {...register('select', {

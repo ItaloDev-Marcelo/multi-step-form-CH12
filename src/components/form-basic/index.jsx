@@ -36,7 +36,7 @@ export default function BasicForm() {
         <div className="form-area">
           <h1 className="form--title">Personal info</h1>
           <form onSubmit={handleSubmit(hundleForm)} id="formData">
-            <legend id="sp1"> Please provide your name, email address, and phone number.</legend>
+            <legend id="sp1" className="sub-title"> Please provide your name, email address, and phone number.</legend>
 
             <div>
               <label htmlFor="name">Name</label>

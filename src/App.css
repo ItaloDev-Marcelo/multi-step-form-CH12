@@ -160,6 +160,11 @@ input[type='radio'] {
   z-index: 1;
 }
 
+.f-sd {
+  background-color: aquamarine !important;
+}
+
+
 label > p {
   width: 50px;
 }
