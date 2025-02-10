@@ -7,7 +7,18 @@ export default function Result() {
 
   const navigate = useNavigate()
   const {formMultStepData} = useContext(GlobalFormContext);
- 
+
+  let FormCheckList = formMultStepData[2]?.checkList || [];
+
+  const dt = FormCheckList && FormCheckList.map((item) => {
+    const [name, price] = item.split(" +$")
+    return {name: name.trim(), price: `${price}`, type: price.slice(2)}
+  })
+
+  const dt2 = 
+
+  console.log(dt)
+
   return (
     <div className="form-container" >
       <div className="container-img">

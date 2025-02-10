@@ -47,7 +47,7 @@ export default function SelectForm() {
 
                <legend className="sub-title">You have the option of monthly or yearly billing.</legend>
                <div id='select--container'>
-                  <div className={result == 'Arcade $9/mo' || result == 'Arcade $90/yr' ? "selected active" : "selected"}>
+                  <div className={result == 'Arcade $9 mo' || result == 'Arcade $90 yr' ? "selected active" : "selected"}>
                      <label htmlFor="select-01"  {...register('select', {
                         required: true
                      })}>
@@ -60,7 +60,7 @@ export default function SelectForm() {
                          <p className="space">{toggleSwitch ? '2 months free' : null}</p>
                      </div>
                   </div>
-                  <div className={result == 'Advanced $12/mo' || result == 'Advanced $120/yr' ? "selected active" : "selected"}>
+                  <div className={result == 'Advanced $12 mo' || result == 'Advanced $120 yr' ? "selected active" : "selected"}>
                      <label htmlFor="select-02" {...register('select', {
                         required: true
                      })}>
