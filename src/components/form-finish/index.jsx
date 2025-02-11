@@ -10,7 +10,8 @@ export default function Result() {
 
   let FormSelected = formMultStepData[1]?.select ? [formMultStepData[1]?.select] : ['']  ;
   let FormCheckList = formMultStepData[2]?.checkList || [];
-  let mix = [...FormSelected, ...FormCheckList]
+  let mix = [...FormCheckList]
+  let mix2 = [...FormSelected]
   
   function convertData(formStep) {
       let FormData = formStep && formStep.map((item) => {
@@ -22,18 +23,34 @@ export default function Result() {
   }
 
   let data01 =  convertData(mix);
+  let data02 =  convertData(mix2);
 
   console.log(data01)
 
   const item = data01.map(item => {
-
      return (
-        <div>
+        <div className="bottom">
           <p>{item.name} </p>
           <p>{item.price}/{item.type}</p>
         </div>
      )
   }) 
+
+  const item2 = data02.map(item => {
+    return (
+       <div>
+        <div className="top">
+         <div>
+         <h4>{item.name} <span>{item.type == 'mo' ? '(Monthly)' : '(Yearly)'}</span> </h4>
+         <a href="#">Change</a>
+         </div>
+         <p>{item.price}/{item.type}</p>
+        
+       </div>
+       <hr />
+       </div>
+    )
+ }) 
 
 
  
@@ -51,7 +68,10 @@ export default function Result() {
       <section className="Form-3">
       <h3 className="form--title">Finish form</h3>
       <h4 className="sub-title">Double-check everything looks OK before confirming.</h4>
+       <article className="mini-form">
+       {item2}
        {item}
+       </article>
       </section>
       <div className="Navbar">
      <button onClick={() => navigate('/form-step1/form-step2/form-step3')} className="btn-Dark-Blue">Go back</button> 

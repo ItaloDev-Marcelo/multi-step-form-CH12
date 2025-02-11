@@ -340,6 +340,23 @@ input[type='radio'] {
   top: -76px;
 }
 
+.mini-form {
+  background-color: var(--Magnolia);
+  margin-top: 2em;
+  border-radius: 7px;
+}
+
+.mini-form > div {
+  padding:  1em .5em;
+}
+
+
+.top, .bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
 
 @media (min-width: 800px) {
   .container-img  {
