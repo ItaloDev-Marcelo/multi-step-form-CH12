@@ -8,17 +8,35 @@ export default function Result() {
   const navigate = useNavigate()
   const {formMultStepData} = useContext(GlobalFormContext);
 
+  let FormSelected = formMultStepData[1]?.select ? [formMultStepData[1]?.select] : ['']  ;
   let FormCheckList = formMultStepData[2]?.checkList || [];
+  let mix = [...FormSelected, ...FormCheckList]
+  
+  function convertData(formStep) {
+      let FormData = formStep && formStep.map((item) => {
+      let num = item.match(/\d+/g)
+      const [name, price] = item.split(" +$")
+      return {name: name.trim(), price: `${num}`, type: price.slice(2).replace('0','')}
+    })
+    return  FormData
+  }
 
-  const dt = FormCheckList && FormCheckList.map((item) => {
-    const [name, price] = item.split(" +$")
-    return {name: name.trim(), price: `${price}`, type: price.slice(2)}
-  })
+  let data01 =  convertData(mix);
 
-  const dt2 = 
+  console.log(data01)
 
-  console.log(dt)
+  const item = data01.map(item => {
 
+     return (
+        <div>
+          <p>{item.name} </p>
+          <p>{item.price}/{item.type}</p>
+        </div>
+     )
+  }) 
+
+
+ 
   return (
     <div className="form-container" >
       <div className="container-img">
@@ -33,7 +51,7 @@ export default function Result() {
       <section className="Form-3">
       <h3 className="form--title">Finish form</h3>
       <h4 className="sub-title">Double-check everything looks OK before confirming.</h4>
-    
+       {item}
       </section>
       <div className="Navbar">
      <button onClick={() => navigate('/form-step1/form-step2/form-step3')} className="btn-Dark-Blue">Go back</button> 

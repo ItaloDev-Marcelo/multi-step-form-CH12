@@ -47,42 +47,42 @@ export default function SelectForm() {
 
                <legend className="sub-title">You have the option of monthly or yearly billing.</legend>
                <div id='select--container'>
-                  <div className={result == 'Arcade $9 mo' || result == 'Arcade $90 yr' ? "selected active" : "selected"}>
+                  <div className={result == 'Arcade +$9 mo' || result == 'Arcade +$90 yr' ? "selected active" : "selected"}>
                      <label htmlFor="select-01"  {...register('select', {
                         required: true
                      })}>
                         <img src={Arcade} alt='' />
-                        <input type="radio" id='select-01' name='select' value={!toggleSwitch ? 'Arcade $9/mo' : 'Arcade $90/yr'} />
+                        <input type="radio" id='select-01' name='select' value={toggleSwitch ? 'Arcade +$90 yr' : 'Arcade +$9 mo'} />
                      </label>
                      <div className="info-box">
                         <p> <span className="radio--title">Arcade</span> <br />
-                           <small>$9{toggleSwitch ? '0/yr' : '/mo'}</small></p>
+                           <small>+$9{toggleSwitch ? '0/yr' : '/mo'}</small></p>
                          <p className="space">{toggleSwitch ? '2 months free' : null}</p>
                      </div>
                   </div>
-                  <div className={result == 'Advanced $12 mo' || result == 'Advanced $120 yr' ? "selected active" : "selected"}>
+                  <div className={result == 'Advanced +$12 mo' || result == 'Advanced +$120 yr' ? "selected active" : "selected"}>
                      <label htmlFor="select-02" {...register('select', {
                         required: true
                      })}>
                         <img src={Advanced} alt='' />
-                        <input type="radio" id='select-02' name='select' value={!toggleSwitch ? 'Advanced $12/mo' : 'Advanced $120/yr'} />
+                        <input type="radio" id='select-02' name='select' value={toggleSwitch ? 'Advanced +$120 yr' : 'Advanced +$12 mo'} />
                      </label>
                      <div className="info-box">
                         <p> <span className="radio--title">Advanced</span>  <br />
-                           <small>$12{toggleSwitch ? '0/yr' : '/mo'}</small></p>
+                           <small>+$12{toggleSwitch ? '0/yr' : '/mo'}</small></p>
                         <p className="space">{toggleSwitch ? '2 months free' : null}</p>
                      </div>
                   </div>
-                  <div className={result == 'Pro $15/mo' || result == 'Pro $150/yr' ? "selected active" : "selected"}>
+                  <div className={result == 'Pro +$15 mo' || result == 'Pro +$150 yr' ? "selected active" : "selected"}>
                      <label htmlFor="select-03" {...register('select', {
                         required: true
                      })}>
                         <img src={Pro} alt='' />
-                        <input type="radio" id='select-03' name='select' value={!toggleSwitch ? 'Pro $15/mo' : 'Pro $150/yr'} />
+                        <input type="radio" id='select-03' name='select' value={toggleSwitch ? 'Pro +$150 yr' : 'Pro +$15 mo'} />
                      </label>
                      <div className="info-box">
                         <p> <span className="radio--title">Pro</span><br />
-                           <small>$15{toggleSwitch ? '0/yr' : '/mo'}/</small></p>
+                           <small>+$15{toggleSwitch ? '0/yr' : '/mo'}/</small></p>
                         <p className="space">{toggleSwitch ? '2 months free' : null}</p>
                      </div>
                   </div>

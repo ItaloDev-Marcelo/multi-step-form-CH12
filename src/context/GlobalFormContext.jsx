@@ -7,7 +7,6 @@ export default function MultFormProvider({ children }) {
     const [formMultStepData, setFormMultStepData] = useState([]);
     const [toggle, setToggle] = useState(false);
 
-    console.log(formMultStepData)
 
     return <GlobalFormContext.Provider value={{formMultStepData, setFormMultStepData, setToggle, toggle}}>{children}</GlobalFormContext.Provider>
 }

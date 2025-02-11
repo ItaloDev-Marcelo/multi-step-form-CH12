@@ -43,7 +43,7 @@ export default function CheckForm() {
           <legend className="sub-title">Add-ons help enhance your gaming experience.</legend>
           <div className="ch-row box-item">
             <input type="checkbox" {...register('checkMe')}
-             name='checkMe' id="ch-1" value={!toggle ? ' Online service +$10 yr' : 'Online service +$1 mo'} />
+             name='checkMe' id="ch-1" value={toggle ? ' Online service +$10 yr' : 'Online service +$1 mo'} />
 
             <label htmlFor="ch-1">
               <div className="ch-row">
@@ -52,10 +52,10 @@ export default function CheckForm() {
               </div>
             </label>
 
-            <a href="#">+$1{toggle ? '0' : null}/mo</a>
+            <a href="#">+$1{toggle ? '0/yr' :'/mo'}</a>
           </div>
           <div className="ch-row box-item">
-            <input type="checkbox" {...register('checkMe')} name='checkMe' id="ch-2" value={!toggle ? 'Larger storage +$20 yr' : 'Larger storage +$2 mo'} />
+            <input type="checkbox" {...register('checkMe')} name='checkMe' id="ch-2" value={toggle ? 'Larger storage +$20 yr' : 'Larger storage +$2 mo'} />
 
             <label htmlFor="ch-2">
               <div className="ch-row">
@@ -63,10 +63,10 @@ export default function CheckForm() {
                   Extra 1TB of cloud save</span>
               </div>
             </label>
-            <a href="#">+$2{toggle ? '0' : null} /mo</a>
+            <a href="#">+$2{toggle ? '0/yr' :'/mo'}</a>
           </div>
           <div className="ch-row box-item">
-            <input type="checkbox" {...register('checkMe')} name='checkMe' id="ch-3" value={!toggle ? 'Customizable Profile +$2 yr' : 'Customizable Profile +$2 mo'} />
+            <input type="checkbox" {...register('checkMe')} name='checkMe' id="ch-3" value={toggle ? 'Customizable Profile +$20 yr' : 'Customizable Profile +$2 mo'} />
 
             <label htmlFor="ch-3">
               <div className="ch-row">
@@ -74,7 +74,7 @@ export default function CheckForm() {
                   Custom theme on your profile</span>
               </div>
             </label>
-            <a href="#">+$2{toggle ? '0' : null}/mo</a>
+            <a href="#">+$2{toggle ? '0/yr' :'/mo'}</a>
           </div>
         </form>
         <div className="Navbar">
