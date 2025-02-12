@@ -13,8 +13,11 @@ export default function CheckForm() {
   const [checkList, setCheckList] = useState([]);
   const check = watch("checkMe", []);
 
+  const [isChecked0, setIsChecked0] = useState(false);
+  const [isChecked1, setIsChecked1] = useState(false);
+  const [isChecked2, setIsChecked2] = useState(false);
+
   useEffect(() => {
-   
     setCheckList(check)
   }, [check])
 
@@ -23,7 +26,6 @@ export default function CheckForm() {
     setData(!data)
     setFormMultStepData([...formMultStepData, {checkList}])
   }
-
 
   return (
     <div className="form-container">
@@ -41,21 +43,26 @@ export default function CheckForm() {
         <h2 className="form--title">Pick add-ons</h2>
         <form onSubmit={handleSubmit(getCheckBox)} id='forma'>
           <legend className="sub-title">Add-ons help enhance your gaming experience.</legend>
-          <div className="ch-row box-item">
+          <div className={isChecked0 ? "ch-row box-item active" : "ch-row box-item"} >
             <input type="checkbox" {...register('checkMe')}
-             name='checkMe' id="ch-1" value={toggle ? ' Online service +$10 yr' : 'Online service +$1 mo'} />
-
+             name='checkMe' id="ch-1"
+             checked={isChecked0}
+             onClick={() =>  setIsChecked0(!isChecked0)}
+             value={toggle ? ' Online service +$10 yr' : 'Online service +$1 mo'} />
             <label htmlFor="ch-1">
               <div className="ch-row">
                 <span> <strong>Online service</strong> <br />
                   Access to multiplayer games</span>
               </div>
             </label>
-
             <a href="#">+$1{toggle ? '0/yr' :'/mo'}</a>
           </div>
-          <div className="ch-row box-item">
-            <input type="checkbox" {...register('checkMe')} name='checkMe' id="ch-2" value={toggle ? 'Larger storage +$20 yr' : 'Larger storage +$2 mo'} />
+          <div className={isChecked1 ? "ch-row box-item active" : "ch-row box-item"}>
+            <input type="checkbox" 
+            checked={isChecked1}
+            {...register('checkMe')} 
+            onClick={() =>  setIsChecked1(!isChecked1)} 
+            name='checkMe' id="ch-2" value={toggle ? 'Larger storage +$20 yr' : 'Larger storage +$2 mo'} />
 
             <label htmlFor="ch-2">
               <div className="ch-row">
@@ -65,8 +72,12 @@ export default function CheckForm() {
             </label>
             <a href="#">+$2{toggle ? '0/yr' :'/mo'}</a>
           </div>
-          <div className="ch-row box-item">
-            <input type="checkbox" {...register('checkMe')} name='checkMe' id="ch-3" value={toggle ? 'Customizable Profile +$20 yr' : 'Customizable Profile +$2 mo'} />
+          <div className={isChecked2 ? "ch-row box-item active" : "ch-row box-item"}>
+            <input type="checkbox"
+            checked={isChecked2}
+            onClick={() =>  setIsChecked2(!isChecked2)}
+             {...register('checkMe')}
+              name='checkMe' id="ch-3" value={toggle ? 'Customizable Profile +$20 yr' : 'Customizable Profile +$2 mo'} />
 
             <label htmlFor="ch-3">
               <div className="ch-row">
