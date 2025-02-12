@@ -9,7 +9,7 @@ import { GlobalFormContext } from "../../context/GlobalFormContext"
 export default function BasicForm() {
  
   const navigate = useNavigate()
-  const { register, handleSubmit } = useForm()
+  const { register, handleSubmit, formState: {errors} } = useForm()
   const { setFormMultStepData } = useContext(GlobalFormContext)
   const [data, setData] = useState(false)
  
@@ -39,24 +39,25 @@ export default function BasicForm() {
             <legend id="sp1" className="sub-title"> Please provide your name, email address, and phone number.</legend>
 
             <div>
-              <label htmlFor="name">Name</label>
-              <input type="text"   {...register('yourName', {
+              <div className="row-input "><label htmlFor="name">Name</label> {errors.yourName ? <p className="Error-txt">This field is required</p>  : null} </div>
+              <input type="text" style={{outlineColor: errors.yourName ? 'red' : ' #9699ab'}}  {...register('yourName', {
                 required: true
               })} name="yourName" id='name' className='basic' placeholder="e.g. Stephen King" />
             </div>
 
 
             <div>
-              <label htmlFor="email">Email Address</label>
-              <input type="email" {...register('email', {
+              <div className="row-input "><label htmlFor="email">Email Address</label> {errors.email ? <p className="Error-txt">This field is required</p>  : null} </div>
+           
+              <input type="email" style={{outlineColor: errors.email ? 'red' : ' #9699ab'}}   {...register('email', {
                 required: true
               })} name="email" id='email' className='basic' placeholder="e.g. stephenking@lorem.com" />
 
             </div>
 
             <div>
-              <label htmlFor="tell">Phone Number</label>
-              <input type="tell" {...register('tell', {
+            <div className="row-input "><label htmlFor="tell">Phone Number</label> {errors.tell ? <p className="Error-txt">This field is required</p>  : null} </div>
+              <input type="tell"  style={{outlineColor: errors.tell ? 'red' : ' #9699ab'}}   {...register('tell', {
                 required: true
               })} name="tell" id='tell' className='basic' placeholder="e.g. +1 234 567 890" />
 
