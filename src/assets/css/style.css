@@ -40,7 +40,7 @@ input {
 .container-img {
   max-width: 100%;
   height: 200px;
-  background-image: url('./assets/images/bg-sidebar-mobile.svg');
+  background-image: url('../../assets/images/bg-sidebar-mobile.svg');
   background-size: cover;
   /* Ajusta para cobrir todo o espaço */
   background-position: center;
@@ -216,9 +216,21 @@ button {
   border-radius: 7px;
 }
 
+.btn-Blue {
+  background-color: var(--Purplish-blue);
+  color: var(--White);
+  border: none;
+  border-radius: 7px;
+}
+
 .btn-Dark-Blue:hover,
 .btn-Dark-Blue:active {
   background-color: var(--Purplish-blue);
+}
+
+.btn-Blue:hover,
+.btn-Blue:active {
+  background-color: var(--Pastel-blue);
 }
 
 .btn-gray {
@@ -467,7 +479,7 @@ label>p {
 
 .black-me {
   color: var(--Marine-blue);
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .top-title {

@@ -24,7 +24,7 @@ export default function Result() {
     let FormData = formStep && formStep.map((item) => {
       let num = item.match(/\d+/g)
       const [name, price] = item.split(" +$")
-      return { name: name.trim(), price: `${num}`, type: price.slice(2).replace('0', '') }
+      return { name: name.trim(), price: `${num}`, type: price.slice(2).replace('0', '') };
     })
     return FormData
   }
@@ -120,8 +120,8 @@ export default function Result() {
           <p className="blue-txt">+${re}/{data03[2] == 'mo' ? 'mo' : 'yr'}</p>
         </div>
         <div className="Navbar navbar-desk4">
-        <button onClick={() => navigate('/form-step1/form-step2/form-step3')} className="btn-Dark-Blue">Go back</button>
-        <button onClick={submitData} className="btn-Dark-Blue">Confirm</button>
+        <button onClick={() => navigate('/form-step1/form-step2/form-step3')} className="btn-gray">Go back</button>
+        <button onClick={submitData} className="btn-Blue">Confirm</button>
       </div>
       </section>
       
