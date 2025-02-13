@@ -38,9 +38,11 @@
     background-repeat: no-repeat; /* Evita repetições */
   }
 
+
+ 
   /*navegation-list bar*/
 
-  ul {
+  .list--container {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -48,9 +50,10 @@
     top: 5%;
     left: 0;
     width: 100%;
+    height: 25%;
   }
 
-  ul .navagation {
+  .list--container .navagation {
     border: 1px solid #fff;
     width: 35px;
     height:  35px;
@@ -60,7 +63,17 @@
     margin: 0 10px;
     font-weight: 700;
     color: var(--White);
-  
+  }
+
+  .navagation-info p:nth-of-type(1)  {
+   color: var(--Light-blue);
+   opacity: .5;
+   padding-bottom: .3em;
+  }
+
+  .navagation-info p > strong {
+    font-weight: 700;
+    color: var(--White);
   }
   
   .navagation.active {
@@ -68,6 +81,10 @@
     color: var(--Marine-blue);
     border: none;
     font-weight: 700;
+  }
+
+  .navagation-info {
+    display: none;
   }
 
  /*Default info form*/
@@ -584,8 +601,23 @@ h6 {
   }
 
 
+  .navagation-info {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 50px;
+  }
 
-  ul {
+
+  .ul-row {
+    display: flex;
+    align-items: center;
+  }
+
+  
+
+
+  .list--container {
     flex-direction: column;
     justify-content: flex-start;
     top: 0;
@@ -594,9 +626,14 @@ h6 {
     height: 100%;
     padding-top: 2em;
   }
+  
+
+  .navagation-info {
+    display: flex;
+  }
 
   
-  ul .navagation {
+  .list--container .navagation {
     position: relative;
     left: 10%;
     width: 40px;
