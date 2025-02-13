@@ -38,8 +38,8 @@ export default function Result() {
   const item = data01.map(item => {
     return (
       <div className="bottom">
-        <p>{item.name} </p>
-        <p>+${item.price}/{item.type}</p>
+        <p className="gray-txt">{item.name} </p>
+        <p className="black-me">+${item.price}/{item.type}</p>
       </div>
     )
   })
@@ -49,10 +49,10 @@ export default function Result() {
       <div>
         <div className="top">
           <div>
-            <h4>{item.name} <span>{item.type == 'mo' ? '(Monthly)' : '(Yearly)'}</span> </h4>
+            <h4 className="top-title">{item.name} <span>{item.type == 'mo' ? '(Monthly)' : '(Yearly)'}</span> </h4>
             <a href="#">Change</a>
           </div>
-          <p>${item.price}/{item.type}</p>
+          <p className="top-txt">${item.price}/{item.type}</p>
         </div>
         <hr />
       </div>
@@ -76,7 +76,7 @@ export default function Result() {
           <li className="navagation active">4</li>
         </ul>
       </div>
-      <section className="Form-3">
+      <section className="Form-3 form3-fix">
         <h3 className="form--title">Finish form</h3>
         <h4 className="sub-title">Double-check everything looks OK before confirming.</h4>
         <article className="mini-form">
@@ -84,8 +84,8 @@ export default function Result() {
           {item}
         </article>
         <div className="total">
-          <h5>total per {data03[2] == 'mo' ? 'month' : 'year'} </h5>
-          <p>${re}/{data03[2] == 'mo' ? 'mo' : 'yr'}</p>
+          <h5 className="gray-txt">Total (per {data03[2] == 'mo' ? 'month' : 'year'})  </h5>
+          <p className="blue-txt">+${re}/{data03[2] == 'mo' ? 'mo' : 'yr'}</p>
         </div>
       </section>
       <div className="Navbar">
