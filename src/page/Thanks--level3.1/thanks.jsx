@@ -1,6 +1,6 @@
-import thanks from '../assets/images/icon-thank-you.svg'
+import thanks from '../../assets/images/icon-thank-you.svg'
 
-import bg from "../assets/images/bg-sidebar-desktop.svg"
+import bg from "../../assets/images/bg-sidebar-desktop.svg"
 
 export default function ThankYou() {
     return (

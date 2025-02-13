@@ -1,8 +1,8 @@
-import { useNavigate } from "react-router-dom"
-import bg from "../../assets/images/bg-sidebar-desktop.svg"
-import { useContext, useState } from "react"
-import { GlobalFormContext } from "../../context/GlobalFormContext"
-import ThankYou from "../../page/thanks";
+import { useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
+import { GlobalFormContext } from "../../context/GlobalFormContext";
+import ThankYou from "../Thanks--level3.1/thanks";
+import bg from "../../assets/images/bg-sidebar-desktop.svg";
 
 export default function Result() {
 
@@ -33,8 +33,6 @@ export default function Result() {
     setShowTime(!showTime)
   }
 
-
-
   const item = data01.map(item => {
     return (
       <div className="bottom">
@@ -63,6 +61,8 @@ export default function Result() {
     reduce((sum, num) => {
       return sum + num
     }, 0)
+
+
 
   return (
    <>
@@ -128,9 +128,6 @@ export default function Result() {
     </div > :
      <ThankYou/>
   }
-   
-     
-
    </>
   )
 }
