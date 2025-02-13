@@ -70,11 +70,11 @@ export default function CheckForm() {
         </div>
 
       </div>
-
       <section className="Form-3">
         <h2 className="form--title">Pick add-ons</h2>
         <form onSubmit={handleSubmit(getCheckBox)} id='forma'>
-          <legend className="sub-title">Add-ons help enhance your gaming experience.</legend>
+          <legend className="sub-title t2">Add-ons help enhance your gaming experience.</legend>
+          <div className="pad-t">
           <div className={isChecked0 ? "ch-row box-item active" : "ch-row box-item"} >
             <input type="checkbox" {...register('checkMe')}
              name='checkMe' id="ch-1"
@@ -119,8 +119,9 @@ export default function CheckForm() {
             </label>
             <a href="#">+$2{toggle ? '0/yr' :'/mo'}</a>
           </div>
+          </div>
         </form>
-        <div className="Navbar">
+        <div className="Navbar navbar-desk3">
           <button onClick={() => navigate('/form-step1/form-step2')} className="btn-gray">Go back</button>
           {data ? <button onClick={() => navigate('/form-step1/form-step2/form-step3/form-step4')} className="btn-Dark-Blue">Next Step</button> :
             <button type="submit" form="forma" className="btn-Dark-Blue">Next Step</button>}

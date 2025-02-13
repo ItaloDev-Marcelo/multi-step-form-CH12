@@ -87,9 +87,8 @@ export default function SelectForm() {
                         <input type="radio" id='select-01' name='select' value={toggleSwitch ? 'Arcade +$90 yr' : 'Arcade +$9 mo'} />
                      </label>
                      <div className="info-box">
-                        <p> <span className="radio--title">Arcade</span> <br />
-                           <small>+$9{toggleSwitch ? '0/yr' : '/mo'}</small></p>
-                         <p className="space">{toggleSwitch ? '2 months free' : null}</p>
+                        <p> <span className="radio--title">Arcade</span> <br /> <small>+$9{toggleSwitch ? '0/yr' : '/mo'}</small></p>
+                        <p className="space">{toggleSwitch ? '2 months free' : null}</p>
                      </div>
                   </div>
                   <div className={result == 'Advanced +$12 mo' || result == 'Advanced +$120 yr' ? "selected active" : "selected"}>
@@ -128,7 +127,7 @@ export default function SelectForm() {
                </div>
 
             </form>
-            <div className="Navbar">
+            <div className="Navbar navbar-desk2">
                <button onClick={() => navigate('/form-step1')} className="btn-gray">Go back</button>
                {data ? <button onClick={() => navigate('/form-step1/form-step2/form-step3')} className="btn-Dark-Blue">Next Step</button> : <button type="submit" form="selectme" className="btn-Dark-Blue">Next Step</button> }
             </div>

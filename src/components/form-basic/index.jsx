@@ -65,8 +65,8 @@ export default function BasicForm() {
         </div>
 
       </div>
-
-      <section className="Form-0">
+     <div >
+     <section className="Form-0">
         <div className="form-area">
           <h1 className="form--title">Personal info</h1>
           <form onSubmit={handleSubmit(hundleForm)} id="formData">
@@ -98,14 +98,14 @@ export default function BasicForm() {
             </div>
 
           </form>
-          <div className="Navbar">
+          <div className="Navbar navbar-desk1">
             {data ? <button onClick={() => navigate('/form-step1/form-step2')} className="btn-Dark-Blue">Next Step</button>
               : <button type="submit" form="formData" className="btn-Dark-Blue">Next Step</button>
             }
           </div>
         </div>
-
       </section>
+     </div>
     </div>
 
   )

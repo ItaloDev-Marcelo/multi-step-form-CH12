@@ -119,11 +119,12 @@ export default function Result() {
           <h5 className="gray-txt">Total (per {data03[2] == 'mo' ? 'month' : 'year'})  </h5>
           <p className="blue-txt">+${re}/{data03[2] == 'mo' ? 'mo' : 'yr'}</p>
         </div>
-      </section>
-      <div className="Navbar">
+        <div className="Navbar navbar-desk4">
         <button onClick={() => navigate('/form-step1/form-step2/form-step3')} className="btn-Dark-Blue">Go back</button>
         <button onClick={submitData} className="btn-Dark-Blue">Confirm</button>
       </div>
+      </section>
+      
     </div > :
      <ThankYou/>
   }
