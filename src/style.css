@@ -572,6 +572,11 @@ h6 {
   }
   
 
+  .t2 {
+    width: 100%;
+    margin: 1em 0;
+  }
+
 
   
   .Form-0 , .form-2, .Form-3 {
@@ -591,6 +596,21 @@ h6 {
     background: url(none);
   }
 
+  #select--container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .selected {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: .5em .5em;
+    padding: 1.3em 1.3em 0 .3em ;
+    width: 400px;
+    min-height: 150px;
+  }
+
  .container-img  .bg   {
     height: auto; 
     padding: 1em 1em;
@@ -608,6 +628,10 @@ h6 {
     left: 50px;
   }
 
+
+  .box-item {
+    width: 95%;
+  }
 
   .ul-row {
     display: flex;
@@ -644,7 +668,7 @@ h6 {
   .Navbar {
     width: 100%;
     display: inline-flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     position: absolute;
     bottom: -10%;
     background-color:transparent;
