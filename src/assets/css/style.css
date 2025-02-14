@@ -299,10 +299,10 @@ button {
 /*form-2*/
 
 .form-2 {
-  width: 330px;
+  width: 340px;
   padding: 0 1.5em;
   top: -60px;
-  left: -7px;
+  left: -5px;
   margin-bottom: 7em;
   padding-bottom: .2em;
 }
@@ -434,7 +434,7 @@ label>p {
 /*Form-3*/
 
 .Form-3 {
-  height: 430px;
+  height: 475px;
   top: -85px;
 }
 

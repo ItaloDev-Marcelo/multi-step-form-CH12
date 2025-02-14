@@ -66,7 +66,8 @@ export default function Result() {
 
   return (
    <>
-   {!showTime ? <div className="form-container" >
+   
+ {!showTime ? <div className="form-container" >
       <div className="container-img">
         <img src={bg} className="bg" />
         <div className="list--container">
@@ -124,10 +125,10 @@ export default function Result() {
         <button onClick={submitData} className="btn-Blue">Confirm</button>
       </div>
       </section>
-      
-    </div > :
+    </div > : 
      <ThankYou/>
-  }
+  } 
+   
    </>
   )
 }
