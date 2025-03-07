@@ -161,7 +161,7 @@ input {
 
 section {
   background-color: var(--White);
-  width: 400px;
+  width: 250px;
   position: relative;
   top: -6em;
   margin: 0 auto;
@@ -184,7 +184,7 @@ form div label {
 /*form-0*/
 
 .Form-0 {
-  height: 430px;
+  height: 460px;
 }
 
 
