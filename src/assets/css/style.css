@@ -184,7 +184,8 @@ form div label {
 /*form-0*/
 
 .Form-0 {
-  height: 460px;
+  height: auto;
+  padding: 1em auto;
 }
 
 
