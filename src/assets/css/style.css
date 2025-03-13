@@ -57,7 +57,7 @@ input {
     transform: translateY(0);
    }
 
-   50% {
+   55% {
     transform: translateY(1rem);
    }
 
@@ -261,7 +261,7 @@ form div .basic {
 
 button {
   width: 100px;
-  height: 35px;
+  height: 35.5px;
 }
 
 .btn-Dark-Blue {
