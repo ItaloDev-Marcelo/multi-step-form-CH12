@@ -161,7 +161,7 @@ input {
 
 section {
   background-color: var(--White);
-  width: 250px;
+  width: 300px;
   position: relative;
   top: -6em;
   margin: 0 auto;
@@ -184,8 +184,7 @@ form div label {
 /*form-0*/
 
 .Form-0 {
-  height: auto;
-  padding: 1em auto;
+  height: 430px;
 }
 
 
@@ -262,7 +261,7 @@ form div .basic {
 
 button {
   width: 100px;
-  height: 35.5px;
+  height: 35px;
 }
 
 .btn-Dark-Blue {
