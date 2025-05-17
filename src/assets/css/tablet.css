@@ -27,11 +27,16 @@
   }
 
   .ch-row span {
-    margin-left: -3em;
+    margin-left: -2em;
   }
 
+
   .ch-row:nth-of-type(2) span {
-    margin-left: -4.2em;
+    margin-left: -4em;
+  }
+
+  .ch-row:nth-of-type(3) span {
+    margin-left: -1em;
   }
 
 
@@ -142,9 +147,10 @@
     align-items: flex-start;
     margin: .5em .5em;
     padding: 1.3em 0 0 1.3em;
-    width: 400px;
+    min-width: 150px ;
     min-height: 150px;
   }
+
 
   .info-box {
     padding-left: -1em;
@@ -248,11 +254,11 @@
   }
 
   .ch-row span {
-    margin-left: -5em;
+    margin-left: -1em;
   }
 
   .ch-row:nth-of-type(2) span {
-    margin-left: -7em;
+    margin-left: -3em;
   }
 
 
@@ -294,6 +300,17 @@
 
 
 }
+
+@media (min-width: 1280px) {
+   .navbar-desk1 {
+    flex-direction: row-reverse;
+    position: relative;
+    top: 2em;
+    left: 2em;
+  }
+}
+
+
 
 /* desktop */
 @media (min-width: 1440px) {
